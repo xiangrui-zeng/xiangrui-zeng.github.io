@@ -2,22 +2,547 @@
 <html lang="en">
 
 <!-- Head tag -->
-<%- partial('_partial/head') %>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          我的2016 - ZengXiangRui的博客 | ZengXiangRui&#39;s Blog
+        
+    </title>
+
+    <link rel="canonical" href="http://xiangrui-zeng.github.io/2017/01/12/my2016/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
 
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="">
 
-    <%- partial('_partial/nav') %>
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">ZengXiangRui&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archives/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
 
     <!-- Main Content -->
-    <%- body %>
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://xiangrui-zeng.github.io/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('my_2016_bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#生活" title="生活">生活</a>
+                        
+                          <a class="tag" href="/tags/#总结" title="总结">总结</a>
+                        
+                    </div>
+                    <h1>我的2016</h1>
+                    <h2 class="subheading"> &quot;为者常成，行者常至&quot;</h2>
+                    <span class="meta">
+                        Posted by Xiangrui Zeng on
+                        2017-01-12
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <blockquote>
+<p>”这一年，我24岁。“<br>“这一年，很糟糕。”<br>“这一年，很重要。”</p>
+</blockquote>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>回顾这一年，怎么来形容我的2016呢，暂且就定义为平庸吧。</p>
+<p>虽然是我的本命年，却并没有什么本命年的魔咒，相反这一年过的风平浪静，然而正因为这种风平浪静，让我真正感觉到了它的糟糕。</p>
+<hr>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h3><p>2016年，来到东京的第二年，生活中不在有第一年的新鲜感，对于周围的人和事，一切都感觉习以为常，这种习以为常带给我更多的是内心的孤独。</p>
+<p>孤独有时并不是坏事，但是当孤独走进了你的内心，它便会如毒药一般侵蚀的全部。</p>
+<p>上半年，虽然我的生活单调无趣，但那时我享受着一个人的孤独，因为我的内心是丰富多彩的。每天早上叫起我的不是闹钟，而是梦想。我会一个人拿着书走到公园，享受着知识带给我的喜悦，我也确实从中获得了力量。每天晚上我会花一个小时健身，看着自己坚硬身体，看着自己完美的6块腹肌我感觉到了生活的美好…</p>
+<p>然而生活不可能一帆风顺，自己也不知道是什么原因，突然对生活不再充满干劲，随之而来的是内心的迷茫，不知道自己今后的方向是什么，因此儿变的消沉。幸好自己还有几个挚友让我在迷茫时还能继续向前走，在此从内心里感谢那些在我低迷时候给我建议，给我支持的朋友们。</p>
+<h4 id="生活记事"><a href="#生活记事" class="headerlink" title="生活记事"></a>生活记事</h4><p>完成的事：</p>
+<ul>
+<li>坚持读书6个月</li>
+<li>坚持健身8个月</li>
+<li>学会了游泳</li>
+<li>在日本第一去滑了雪</li>
+</ul>
+<p>没完成的事：</p>
+<ul>
+<li>理财计划失败</li>
+<li>旅行</li>
+</ul>
+<h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><p>2016年，步入社会工作的第二年，总结一下在Dreamarts的两年，作为自己人生中的第一份工作，进入的第一家公司。在这里我受到了很多的照顾，也学习到了很多的东西，技术上的，非技术上的…</p>
+<p>在这里我的看到了与国内不一样的风景，在这里我知道优秀的人事怎么努力的，在这里我知道了自己的不足…</p>
+<p>技术怪人B老师，在研究新的技术总是像孩子一样，每天晚上总是工作到很晚，周末总是喜欢到公司钻研新的技术，每次在凌晨提交的code都会让他兴奋不已。</p>
+<p>温柔的领导L哥，严密的逻辑思维给人深深的信赖感，语重心长的建议让人无法拒绝，在他手底下工作真的是很有动力。</p>
+<p>见识超群的Kさん，日本人中为数不多的高效率工作狂，总是通宵加班却常说自己下了班不工作，虽然已经50多岁，却有孩子般的内心，与我如朋友般的亲切，每月出去喝一次酒，在工作和生活中都给了我很多建议。</p>
+<p>除此之外还认识了一群志同道合的小伙伴，我们一起喝酒，一起吐槽，把酒言欢。</p>
+<p>可以说确实是收获了很多，然而在Dreamarts里并没有按照自己计划发展。本以为自己可以独当一面，在完善自我的同时得到领导的重视和赞赏，然而现实却是不尽人意。谈不上不得志，但也是找不到工作的价值。可能是自身对于工作岗位的认识有问题，也有可能是公司的制度有问题，总之，在这一年里，我清晰的认识到了，自己的价值观跟现在公司的价值观的不同。</p>
+<p>价值观这个东西无所谓对错，但是价值观不同很难创造出有价值的东西，这也便有了我的人生第一次想要换工作的想法。</p>
+<p>但是因为懒，或者因为没自信，这想法一度被搁置的半年之久，期间几个朋友的换了工作，拿着诱人的薪资，这也又一次的刺激到我，鉴定了我想换工作的想法，于是便开始准备，但是由于日语问题进度还是很缓慢，以至于经过了近两个月还没有任何结果，跨入了2017年。</p>
+<p>现在回想想起2016在工作上，确实是浪费了半年的时间。但在这半年里我也明白了自身目前最大的问题。一是自身的硬实力还远远没有达到顶尖水平，二是危机意识还不够强烈。三是勇气不足，畏首畏尾。</p>
+<p>“亡羊补牢，未为晚也”我并不赞同，但是按照经济学的理论，如果风险评估没有做好，及时止损便是最好的解决方案。</p>
+<p>2017一定要迈开步伐，向着远方前行。</p>
+<h4 id="工作记事"><a href="#工作记事" class="headerlink" title="工作记事"></a>工作记事</h4><p>完成的事：</p>
+<ul>
+<li>独立搭建公司内GitHub与Subversion服务器</li>
+<li>将公司project code从subversion上移到git上</li>
+<li>CI构建：构建自动化build和deploy平台</li>
+<li>完成公司内重要的机能的开发（文件服务系统，OAuth2认证）</li>
+<li>用Node.js + Express搭建简单的web应用程序</li>
+<li>在LeetCode上解决了45个问题</li>
+<li>开启的自己Blog服务</li>
+<li>开始了换工作计划</li>
+</ul>
+<p>没完成的事：</p>
+<ul>
+<li>实现一个初具规模的web服务</li>
+<li>向opensource项目贡献代码</li>
+<li>记录自己的工作历程与定期总结</li>
+<li>换工作</li>
+</ul>
+<hr>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>生活不只有眼前的苟且，还有诗和远方。</p>
+<p>2016已经落下帷幕，2017开始扬帆启程。</p>
+<p><img src="my_2016_yuanfang.jpg"></p>
+<p>—— Eidt by Xiangrui Zeng</p>
+
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2017/01/06/hello-2017/" data-toggle="tooltip" data-placement="top" title="My First Blog">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#生活" title="生活">生活</a>
+                        
+                          <a class="tag" href="/tags/#总结" title="总结">总结</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://xiangrui-zeng.github.io" target="_blank">ZengXiangrui&#39;s Blog</a></li>
+                    
+                        <li><a href="#" target="_blank">Blog</a></li>
+                    
+                        <li><a href="#" target="_blank">Foo</a></li>
+                    
+                        <li><a href="#" target="_blank">Bar</a></li>
+                    
+                        <li><a href="#" target="_blank">Example Friends</a></li>
+                    
+                        <li><a href="#" target="_blank">It helps SEO</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "xiangrui-zeng-blog";
+    var disqus_identifier = "http://xiangrui-zeng.github.io/2017/01/12/my2016/";
+    var disqus_url = "http://xiangrui-zeng.github.io/2017/01/12/my2016/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:https://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
 
     <!-- Footer -->
-    <%- partial('_partial/footer') %>
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/Shel_Rain">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/xr-zeng">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://weibo.com/xiangruizeng">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/zengxiangrui.io">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/xiangrui-zeng">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; ZengXiangRui&#39;s Blog 2017 
+                    <br>
+                    Theme by <a href="https://hexo.io/themes/">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("https://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="https://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://xiangrui-zeng.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
 
 
 <!-- Image to hack wechat -->
-<img src="<%= config['url'] %><%= config['root'] %>img/icon_wechat.png" width="0" height="0" />
+<img src="http://xiangrui-zeng.github.io/img/icon_wechat.png" width="0" height="0" />
 <!-- Migrate from head to bottom, no longer block render and still work -->
 
 </body>
